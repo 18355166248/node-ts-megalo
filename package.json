@@ -1,0 +1,22 @@
+{
+  "name": "node-ts-megalo",
+  "version": "1.0.0",
+  "description": "",
+  "bin": "lib/bin.js",
+  "main": "lib/http-serve.js",
+  "scripts": {
+    "start": "ts-node src/cli.ts",
+    "build": "build -p tsconfig.prod.json",
+    "test": "jest --all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.3.0",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  }
+}
