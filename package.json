@@ -5,7 +5,7 @@
   "bin": "lib/bin.js",
   "main": "lib/http-serve.js",
   "scripts": {
-    "start": "ts-node src/cli.ts",
+    "start": "ts-node src/http-post",
     "build": "build -p tsconfig.prod.json",
     "test": "jest --all"
   },
