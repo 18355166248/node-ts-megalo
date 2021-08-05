@@ -5,7 +5,7 @@ const { MYSQL_CONF } = require("../config/db");
 var con = mysql.createConnection(MYSQL_CONF);
 
 // 开始连接
-con.connect();
+con.connect({});
 
 // 执行sql语句
 function exec(sql) {

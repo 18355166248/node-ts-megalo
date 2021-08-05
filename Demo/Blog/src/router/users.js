@@ -1,5 +1,6 @@
 const { SuccessModel, ErrorModel } = require("../model/resModel");
 const { login } = require("../controller/users");
+const { set } = require("../db/redis");
 
 const usersRouter = (req, res) => {
   const GET = req.method === "GET";
@@ -14,6 +15,8 @@ const usersRouter = (req, res) => {
       if (res.username) {
         req.session.username = res.username;
         req.session.realname = res.realname;
+        // 设置 redis session 的值
+        set(req.sessionId, req.session);
         return new SuccessModel("登录成功");
       }
 
