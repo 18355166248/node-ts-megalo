@@ -6,9 +6,9 @@ const usersRouter = (req, res) => {
   const GET = req.method === "GET";
   const POST = req.method === "POST";
 
-  if (GET && req.path === "/api/users/login") {
-    // const { username, password } = req.body;
-    const { username, password } = req.query;
+  if (POST && req.path === "/api/users/login") {
+    const { username, password } = req.body;
+    // const { username, password } = req.query;
 
     const result = login(username, password);
     return result.then((res) => {
